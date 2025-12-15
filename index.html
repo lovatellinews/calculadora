@@ -7,7 +7,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: url(https://i.postimg.cc/NFSjmxMc/fea9a06b7f95cf2d8c16d04864439da1.jpg) no-repeat center center fixed;
+      background: url('https://exemplo.com/minha-imagem.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #333;
     }
@@ -63,15 +63,19 @@
       text-align: center;
     }
 
-    .result {
+    .result-box {
       text-align: center;
-      font-size: 18px;
       margin-top: 20px;
-      background: rgba(0,0,0,0.6); /* fundo escuro */
-      color: #fff;                 /* texto branco */
+    }
+
+    .result {
+      font-size: 18px;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
       padding: 10px;
       border-radius: 8px;
       display: inline-block;
+      margin: 5px 0;
     }
 
     .buttons {
@@ -115,11 +119,13 @@
 
   <div class="buttons">
     <button onclick="calcular()">Calcular</button>
-    <button onclick="copiar()">Copiar Lista</button>
   </div>
 
-  <div class="result" id="resultado"></div>
-  <div class="result" id="deposito"></div>
+  <div class="result-box">
+    <div class="result" id="resultado"></div>
+    <div class="result" id="deposito"></div>
+    <button onclick="copiar()">Copiar Lista</button>
+  </div>
 
   <script>
     function calcular() {
